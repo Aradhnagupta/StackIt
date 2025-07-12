@@ -1,10 +1,11 @@
+/* src/pages/HomePage.css */
 
 .home-container {
-  max-width: 1400px;
-  margin: 30px auto;
+  max-width: 1200px;
+  margin: 40px auto;
   padding: 0 20px;
-  font-family: 'Roboto', sans-serif;
-  color: #2d2d2d;
+  font-family: 'Rubik', sans-serif;
+  color: #1f2937;
 }
 
 /* Header Section */
@@ -16,24 +17,18 @@
 }
 
 .home-title {
-  font-family: 'Rubik', sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 600;
-  color: rgba(0, 0, 0, );
-  text-align: center;
-  letter-spacing: -0.5px;
-  margin-bottom: 24px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, );
-  transition: transform 0.3s ease;
+  color: #334155;
+  margin: 0;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 
-
-/* Ask Button */
 .ask-button {
   padding: 10px 20px;
-  background-color: #1e3a8a;
-  color: white;
+  background-color: #134e4a;
+  color: #fff;
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -41,7 +36,7 @@
   transition: background-color 0.3s ease;
 }
 .ask-button:hover {
-  background-color: #1e40af;
+  background-color: #115e59;
 }
 
 /* Filter/Search Bar */
@@ -55,10 +50,10 @@
 .filter-select,
 .search-bar {
   padding: 10px 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #d1d5db;
   border-radius: 6px;
   outline: none;
-  flex: 1;
+  font-size: 0.9rem;
 }
 
 .search-bar {
@@ -76,63 +71,65 @@
 .question-item {
   display: flex;
   justify-content: space-between;
-  background-color: #f9fafb;
+  background-color: #f8fafc;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 10px;
   border: 1px solid #e5e7eb;
   transition: box-shadow 0.3s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 .question-item:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
-/* Left Section of Question */
+/* Left Section */
 .question-left {
   flex: 1;
 }
 
-.question-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #111827;
-  margin-bottom: 5px;
+.questiontitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 6px;
 }
 
 .question-desc {
-  margin: 8px 0;
+  font-size: 0.95rem;
   color: #4b5563;
+  margin-bottom: 10px;
 }
 
 .tags {
-  margin-top: 10px;
+  margin: 8px 0;
 }
+
 .tag {
   display: inline-block;
-  margin-right: 8px;
-  padding: 4px 10px;
   background-color: #e0f2fe;
-  color: #0369a1;
-  border-radius: 20px;
-  font-size: 0.8rem;
+  color: #0284c7;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  margin-right: 8px;
 }
 
 .username {
   font-size: 0.85rem;
   color: #6b7280;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
-/* Right Section of Question */
+/* Right Section */
 .answer-count {
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-align: center;
-  color: #1e3a8a;
+  color: #0f766e;
   font-weight: bold;
-  padding-left: 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding-left: 15px;
 }
 
 /* Pagination */
@@ -146,8 +143,8 @@
 .page-button {
   padding: 8px 14px;
   border: none;
-  background-color: #f3f4f6;
-  color: #1e3a8a;
+  background-color: #f1f5f9;
+  color: #134e4a;
   border-radius: 6px;
   font-weight: 500;
   cursor: pointer;
@@ -155,5 +152,73 @@
 }
 
 .page-button:hover {
-  background-color: #e0e7ff;
+  background-color: #d1fae5;
 }
+
+.meta-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* .vote-inline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vote-inline button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s;
+  color: #1e3a8a;
+}
+
+.vote-inline button:hover {
+  transform: scale(1.2);
+}
+
+.vote-inline span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+} */
+.vote-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: #1e3a8a;
+  font-weight: 500;
+}
+
+.vote-inline button {
+  background: #eef6ff;
+  border: 1px solid #bcdfff;
+  border-radius: 6px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #1d4ed8;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.vote-inline button:hover {
+  background-color: #dbeafe;
+  color: #1e3a8a;
+  transform: translateY(-1px) scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vote-inline span {
+  font-size: 16px;
+  color: #111827;
+  font-weight: 600;
+  margin: 0 4px;
+}
+

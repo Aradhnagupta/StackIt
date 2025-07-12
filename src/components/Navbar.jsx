@@ -1,33 +1,47 @@
-// src/components/Navbar.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+
+
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import NotificationBell from './NotificationBell.jsx';
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
         <Link to="/">StackIt</Link>
       </div>
 
-      <ul className="navbar-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/ask">Ask Question</Link></li>
-        <li><Link to="/questions">Browse Questions</Link></li>
-      </ul>
-
-      <div className="navbar-search">
-        <input type="text" placeholder="Search questions..." />
-        <button>🔍</button>
+      <div className="hamburger" onClick={() => setMenuOpen(true)}>
+        &#9776;
       </div>
 
-      <div className="navbar-auth">
-        {/* Replace with conditional rendering later */}
-        <Link to="/login" className="login-btn">Login</Link>
-        <Link to="/signup" className="signup-btn">Signup</Link>
+      <div className={`navbar-menu ${menuOpen ? "open" : ""}`}>
+        {/* Close button inside the menu */}
+        <div className="close-icon" onClick={() => setMenuOpen(false)}>
+          &times;
+        </div>
+
+        <ul className="navbar-links">
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+          <li><Link to="/ask" onClick={() => setMenuOpen(false)}>Ask</Link></li>
+        </ul>
+        <div className="navbar-auth">
+           <div className="auth-right">
+           <NotificationBell />
+          <Link to="/login" className="login-btn" onClick={() => setMenuOpen(false)}>Login</Link>
+          <Link to="/signup" className="signup-btn" onClick={() => setMenuOpen(false)}>Sign Up</Link>
+           </div>
+           
+        </div>
       </div>
     </nav>
   );
 }
 
 export default Navbar;
+
+
+

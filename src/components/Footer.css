@@ -2,7 +2,7 @@
 /* src/components/Footer.css */
 
 .modern-footer {
-  background: linear-gradient(to right, #2c3e50, #4ca1af); /* gradient background */
+  background: linear-gradient(to right, #2c3e50,#4ca1af ); /* gradient background */
   padding: 13px 24px;
   color: #fff;
   border-top: none;

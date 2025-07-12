@@ -38,19 +38,21 @@
 }
 
 .ask-form input[type="text"]:focus {
-  border-color: #007bff;
+  border-color: #334155;
   outline: none;
+  
 }
 
 .quill-editor {
   margin-top: 10px;
   margin-bottom: 16px;
+  
 }
 
 .ask-form button {
   margin-top: 24px;
   padding: 12px 20px;
-  background-color: #007bff;
+  background-color: #334155;
   color: white;
   font-size: 1rem;
   font-weight: 600;
@@ -61,7 +63,7 @@
 }
 
 .ask-form button:hover {
-  background-color: #0056b3;
+  background-color: #334155;
 }
 
 @keyframes fadeIn {

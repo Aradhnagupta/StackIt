@@ -28,7 +28,7 @@ function QuestionDetail() {
       </div>
 
       <div className="answers-section">
-        <h3 className="section-heading">💡 Top Answer</h3>
+        <h3 className="section-heading"> Top Answer</h3>
         <div className="answer">
           <p>
             You can use `CONCAT(first_name, ' ', last_name)` or `CONCAT_WS(' ', first_name, last_name)` depending on your SQL version.
@@ -38,7 +38,7 @@ function QuestionDetail() {
       </div>
 
       <div className="submit-answer">
-        <h4 className="section-heading">✍️ Submit Your Answer</h4>
+        <h4 className="section-heading"> Submit Your Answer</h4>
         <form onSubmit={handleSubmit}>
           <ReactQuill
             value={answer}
@@ -46,7 +46,7 @@ function QuestionDetail() {
             placeholder="Write your answer with clarity..."
             className="quill-editor"
           />
-          <button type="submit" className="submit-btn">🚀 Submit Answer</button>
+          <button type="submit" className="submit-btn"> Submit Answer</button>
         </form>
       </div>
     </div>
