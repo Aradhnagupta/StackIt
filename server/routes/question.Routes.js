@@ -1,12 +1,10 @@
-import express from "express";
-import { getAllQuestions, askQuestion } from "../controllers/question.Controller.js";
+import express from 'express';
+import { getAllQuestions, askQuestion } from '../controllers/questionController.js';
+import { requireAuth } from '../middlewares/auth.middleware.js';
 
 const router = express.Router();
 
-// GET /api/questions
-router.get("/", getAllQuestions);
-
-// POST /api/questions/ask
-router.post("/ask", askQuestion);
+router.get('/', getAllQuestions);
+router.post('/ask', requireAuth, askQuestion);
 
 export default router;
