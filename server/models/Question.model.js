@@ -24,3 +24,5 @@ const QuestionsSchema = new mongoose.Schema({
         default: 0
     }
 },{timestamps: true})
+
+export const Question = mongoose.model("Question",QuestionsSchema)
