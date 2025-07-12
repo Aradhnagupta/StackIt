@@ -1,0 +1,250 @@
+.navbar {
+  width: 100vw;
+  margin: 0;
+  padding: 12px 40px;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+
+
+
+.navbar-logo a {
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(to right, #334155,  #4ca1af); /* dark to light slate */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: 1px;
+  transition: transform 0.2s ease;
+}
+
+.navbar-logo a:hover {
+  transform: scale(1.05);
+}
+
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #334155; /* Light slate (to contrast dark navbar bg) */
+  font-weight: 500;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-family: 'Rubik', sans-serif;
+  position: relative;
+}
+
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #4ca1af; /* sky blue underline effect */
+  transition: width 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #4ca1af;
+}
+
+.navbar-links li a:hover::after {
+  width: 100%;
+}
+
+
+
+
+
+
+.navbar-auth a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+/* Common button base style */
+.login-btn,
+.signup-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid #334155; /* inspired by dark slate tone */
+  background-color: transparent;
+  color: #334155;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.login-btn:hover,
+.signup-btn:hover {
+  background-color: #334155;
+  color: #ffffff;
+}
+/* Already included: your custom navbar styles from your message */
+/* --- Append the following for responsiveness --- */
+
+/* Base navbar styles (keep your existing styles untouched) */
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: #334155;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+
+
+/* New container for both links + auth */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #ffffff;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    width: 180px;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navbar-links li {
+    margin: 0;
+  }
+
+  .navbar-auth {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-auth a {
+    margin: 6px 0;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.close-icon {
+  display: none;
+  font-size: 28px;
+  text-align: right;
+  padding: 10px;
+  cursor: pointer;
+  color: #334155;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 999;
+  }}
+
+  /* Align auth buttons and bell horizontally */
+.auth-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 17rem;
+}
+
+/* Notification bell alignment fix */
+.notification-bell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  color: #334155;
+  margin-right: 4px;
+}
+
+/* Make bell icon tighter */
+.bell-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tighten unread count bubble */
+.unread-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #e11d48;
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  min-width: 16px;
+  text-align: center;
+  line-height: 1;
+  box-shadow: 0 0 0 2px white;
+}
+
+
+ 
+
