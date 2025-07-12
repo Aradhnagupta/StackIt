@@ -1,9 +1,7 @@
-const express = require("express");
+import express from "express";
+import { getAllQuestions, askQuestion } from "../controllers/question.Controller.js";
+
 const router = express.Router();
-const {
-  getAllQuestions,
-  askQuestion,
-} = require("../controllers/questionController");
 
 // GET /api/questions
 router.get("/", getAllQuestions);
@@ -11,4 +9,4 @@ router.get("/", getAllQuestions);
 // POST /api/questions/ask
 router.post("/ask", askQuestion);
 
-module.exports = router;
+export default router;

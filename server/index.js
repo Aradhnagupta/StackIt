@@ -1,11 +1,10 @@
-const express = require("express");
-const cors = require("cors");
-const questionRoutes = require("./routes/questionRoutes");
+import express from "express";
+import cors from "cors";
+import questionRoutes from "./routes/question.Routes.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
@@ -21,3 +20,4 @@ app.use("/api/questions", questionRoutes);
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
+
