@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import HomePage from '../pages/HomePage';
-import LoginPage from '../pages/LoginPage';
-import SignupPage from '../pages/SignupPage';
-import AskQuestion from '../pages/AskQuestion';
-import QuestionDetail from '../pages/QuestionDetail';
+import HomePage from '../pages/HomePage.jsx';
+import LoginPage from '../pages/LoginPage.jsx';
+import SignupPage from '../pages/SignupPage.jsx';
+import AskQuestion from '../pages/AskQuestion.jsx';
+import QuestionDetail from '../pages/QuestionDetail.jsx';
 
 function AppRoutes() {
   return (
